@@ -46,6 +46,8 @@ let
               comonad          = dontCheck super.comonad;
               semigroupoids    = dontCheck super.semigroupoids;
               lens             = dontCheck super.lens;
+              linear           = dontCheck super.linear;
+              bytes            = dontCheck super.bytes; # dependency of linear
 
               miso    = self.callCabal2nix "miso" miso-src {};
               servant = dontCheck (doJailbreak (self.callCabal2nix "servant" (servant-src + "/servant") {}));

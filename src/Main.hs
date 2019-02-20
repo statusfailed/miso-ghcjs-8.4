@@ -11,6 +11,8 @@ import Miso.String
 import Data.Map.Strict (Map)
 import qualified Data.Map.Strict as Map
 
+import Linear.V2 (V2(..))
+
 breaksInOldGHC :: Ord k => Map k a -> k -> Maybe a 
 breaksInOldGHC = (Map.!?) -- since containers 0.5.9, which isn't in GHC 8.0
 
